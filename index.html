@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temukan Pasangan Sekarang!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff5f6d, #ffc371);
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: rgba(0,0,0,0.4);
+      padding: 30px;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    .cta-btn {
+      background: #fff;
+      color: #e74c3c;
+      font-size: 20px;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background: #f1c40f;
+      color: #fff;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hai, aku <span id="username">USERNAME_KAMU</span> 😘</h1>
+    <p>Aku lagi cari teman chat dan pasangan untuk malam ini. Mau kenalan?</p>
+    <a href="LINK_CPA_KAMU" class="cta-btn">Lihat Profil & Chat Sekarang</a>
+    <div class="footer">
+      *Khusus 18+ | Privasi Aman | Banyak Member Aktif
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const user = params.get("u");
+    if (user) document.getElementById("username").textContent = user;
+  </script>
+</body>
+</html>
